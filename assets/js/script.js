@@ -1,5 +1,4 @@
-// script.js
-
+// Load Main Game Button
 window.addEventListener('load', () => {
     const startButton = document.getElementById('start-btn');
     const container = document.getElementById('container');
@@ -15,3 +14,5 @@ window.addEventListener('load', () => {
     });
   });
   
+// Start New Game
+

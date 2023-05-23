@@ -15,4 +15,11 @@ window.addEventListener('load', () => {
   });
   
 // Start New Game
+const startActualGameBtn = document.getElementById('play-btn');
+
+startActualGameBtn.addEventListener ('click',
+    function () {
+        
+    }
+)
 

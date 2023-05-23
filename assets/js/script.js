@@ -42,7 +42,15 @@ function generateGrid() {
     cellNumber.textContent = i; // Set the cell number
 
     gameCell.addEventListener('click', function () {
-      gameCell.classList.toggle('cell-selected');
+
+      if (gameCell.classList.contains('cell-selected')) {
+        gameCell.classList.remove('cell-selected');
+        console.log('You unselected cell ' + cellNumber.textContent);
+      } else {
+        gameCell.classList.add('cell-selected');
+        console.log('You selected cell ' + cellNumber.textContent);
+      }
+      
     });
 
     gameCell.appendChild(cellNumber); // Append the number element to the cell

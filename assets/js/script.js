@@ -22,9 +22,12 @@ startActualGameBtn.addEventListener ('click',
       
       const gameGridContainer = document.getElementById('grid-game-container');
 
-      for (let i = 0; i < 100; i++) {
+      for (let i = 1; i <= 100; i++) {
         const gameCell = createElement('div', 'bomb-cell');
+        const cellNumber = createElement('span', 'cell-number');
+        cellNumber.textContent = i; // Set the cell number
         
+        gameCell.appendChild(cellNumber); // Append the number element to the cell
         gameGridContainer.appendChild(gameCell);
       }
     }

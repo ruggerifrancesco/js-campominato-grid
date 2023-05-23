@@ -20,9 +20,18 @@ const gameGridContainer = document.getElementById('grid-game-container');
 
 startActualGameBtn.addEventListener ('click',
     function () {
+      resetGrid();
       generateGrid();
     }
 )
+
+// Function to reset the grid
+function resetGrid() {
+  // Remove all child elements (grid cells) from the grid container
+  while (gameGridContainer.firstChild) {
+    gameGridContainer.removeChild(gameGridContainer.firstChild);
+  }
+}
 
 // Function to generate the grid
 function generateGrid() {

@@ -64,7 +64,14 @@
     width: 1000px;
     height: 1000px;
     border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
   }
+    .bomb-cell {
+      width: calc(100% / 10);
+      height: calc(100% / 10);
+      border: 2px solid black;
+    }
   
   footer {
     display: flex;

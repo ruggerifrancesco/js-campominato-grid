@@ -63,9 +63,10 @@
   #grid-game-container {
     width: 1000px;
     height: 1000px;
-    border: 2px solid black;
+    outline: 2px solid black;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 1rem;
   }
     .bomb-cell {
       width: calc(100% / 10);
@@ -79,6 +80,19 @@
       user-select: none; /* Standard syntax */
       cursor: pointer;
     }
+    .bomb-cell:nth-child(1) {
+      border-top-left-radius: 1rem;
+    }
+    .bomb-cell:nth-child(10) {
+      border-top-right-radius: 1rem;
+    }
+    .bomb-cell:nth-child(91) {
+      border-bottom-left-radius: 1rem;
+    }
+    .bomb-cell:nth-child(100) {
+      border-bottom-right-radius: 1rem;
+    }
+
     .cell-selected {
       background-color: blue;
     }

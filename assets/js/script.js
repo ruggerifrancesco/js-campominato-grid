@@ -16,28 +16,30 @@ window.addEventListener('load', () => {
   
 // Start New Game
 const startActualGameBtn = document.getElementById('play-btn');
+const gameGridContainer = document.getElementById('grid-game-container');
 
 startActualGameBtn.addEventListener ('click',
     function () {
-      
-      const gameGridContainer = document.getElementById('grid-game-container');
-
-      for (let i = 1; i <= 100; i++) {
-        const gameCell = createElement('div', 'bomb-cell');
-        const cellNumber = createElement('span', 'cell-number');
-        cellNumber.textContent = i; // Set the cell number
-
-        gameCell.addEventListener('click',
-          function () {
-            gameCell.classList.toggle('cell-selected');
-          }
-        )
-        
-        gameCell.appendChild(cellNumber); // Append the number element to the cell
-        gameGridContainer.appendChild(gameCell);
-      }
+      generateGrid();
     }
 )
+
+// Function to generate the grid
+function generateGrid() {
+
+  for (let i = 1; i <= 100; i++) {
+    const gameCell = createElement('div', 'bomb-cell');
+    const cellNumber = createElement('span', 'cell-number');
+    cellNumber.textContent = i; // Set the cell number
+
+    gameCell.addEventListener('click', function () {
+      gameCell.classList.toggle('cell-selected');
+    });
+
+    gameCell.appendChild(cellNumber); // Append the number element to the cell
+    gameGridContainer.appendChild(gameCell);
+  }
+}
 
 // Function to create new Element
 function createElement (tagName, className) {

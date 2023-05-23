@@ -37,11 +37,12 @@
     justify-content: space-between;
     align-items: center;
     background-color: #f1f1f1;
+    height: 100px;
   }
   
   #header img {
     width: 100px;
-    height: 100px;
+    height: 100%;
   }
   
   #game-container.hidden,
@@ -55,6 +56,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-y: scroll;
+    padding: 2rem 0;
   }
 
   #grid-game-container {

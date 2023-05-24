@@ -22,7 +22,7 @@ startActualGameBtn.addEventListener ('click',
     function () {
       // To clear Grid with .innerHTML
         // gameGridContainer.innerHTML = "";
-      resetGrid('gameGridContainer');
+      resetGrid(gameGridContainer);
       generateGrid();
     }
 )

@@ -33,6 +33,9 @@
     border: none;
     cursor: pointer;
   }
+    #start-btn {
+      margin-top: 1rem;
+    }
   
   #header {
     display: none;

@@ -20,16 +20,16 @@ const gameGridContainer = document.getElementById('grid-game-container');
 
 startActualGameBtn.addEventListener ('click',
     function () {
-      resetGrid();
+      resetGrid('gameGridContainer');
       generateGrid();
     }
 )
 
 // Function to reset the grid
-function resetGrid() {
+function resetGrid(constName) {
   // Remove all child elements (grid cells) from the grid container
-  while (gameGridContainer.firstChild) {
-    gameGridContainer.removeChild(gameGridContainer.firstChild);
+  while (constName.firstChild) {
+    constName.removeChild(constName.firstChild);
   }
 }
 
